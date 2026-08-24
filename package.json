@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dist/index.js",
-    "build": "tsc",
+    "start": "node init && node dist/index.js",
+    "build": "node init && tsc",
     "clear": "rimraf dist",
-    "dev": "cross-env NODE_ENV=development ts-node-dev --respawn --pretty --transpile-only src/index.ts"
+    "dev": "node init && cross-env NODE_ENV=development ts-node-dev --respawn --pretty --transpile-only src/index.ts"
   },
   "author": "",
   "license": "ISC",
@@ -34,6 +34,7 @@
     "mongodb": "^5.7.0",
     "mongoose": "^7.2.4",
     "morgan": "^1.10.0",
+    "node-fetch": "^3.3.2",
     "path": "^0.12.7"
   },
   "devDependencies": {
